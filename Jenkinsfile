@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo "creating Dockerfile"
                 echo "FROM node:7-alpine:latest" > Dockerfile
-                //docker build -t dockerimage Dockerfile
+                docker build -t dockerimage -f Dockerfile .
                 sh 'node --version'
                 //sh 'svn --version'
             }
